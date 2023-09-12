@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="constants.js" defer></script>
+    <script src="main.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="myForm">
+        <h1></h1>
+        <h3></h3>
+        <div class="form-group">
+            <label id="labelFname" for="firstName"></label>
+            <input type="text" id="firstName">
+            <div id="firstNameError" class="error-message"></div>
+        </div>
+        <div class="form-group">
+            <label id="labelLname" for="lastName"></label>
+            <input type="text" id="lastName">
+            <div id="lastNameError" class="error-message"></div>
+        </div>
+        <div class="form-group">
+            <label id="labelIdType" for="idType"></label>
+            <select id="idType" onchange="displayIdType()">
+                <option id="optionId" value="idNumber"></option>
+                <option id="optionPassport" value="passportNumber"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label id="labelIdPassport" for="idNumber"></label>
+            <input type="text" id="idNumber">
+            <div id="idNumberError" class="error-message"></div>
+        </div>
+        <div class="form-group">
+            <label id="labelArabicNone" for="language"></label>
+            <select id="language">
+                <option id="optionArabic" value="Arabic"></option>
+                <option id="optionNone" value="None"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label id="labelCountry" for="country"></label>
+            <select id="country">
+                <option id="optionIsrael" value="israel"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label id="labelImGuardian" for="guardian"></label>
+            <input type="checkbox" id="guardian">
+            <div id="guardianError" class="error-message"></div>
+        </div>
+        <button type="submit"></button>
+    </form>
+
+
+
+</body>
+
+</html>
