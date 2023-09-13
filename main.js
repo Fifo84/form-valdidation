@@ -12,7 +12,7 @@ function is_israeli_id_number(id) {
     0
   );
 }
-// Function to display appropriate placeholder text based on ID type selection
+
 function displayIdType() {
   const idType = document.getElementById("idType");
   const idNumber = document.getElementById("idNumber");
@@ -23,7 +23,6 @@ function displayIdType() {
       : "Enter valid passport number";
 }
 
-// Event listener for form submission
 document.getElementById("myForm").addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -40,27 +39,23 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
   let idNumberError = document.getElementById("idNumberError");
   let guardianError = document.getElementById("guardianError");
 
-  // Clear previous error messages
   firstNameError.innerText = "";
   lastNameError.innerText = "";
   idNumberError.innerText = "";
   guardianError.innerText = "";
 
-  let isValid = true; // Flag to track validation status
+  let isValid = true;
 
-  // Validate first name field
   if (!firstName) {
     firstNameError.innerText = firstNameErrorTxt;
     isValid = false;
   }
 
-  // Validate last name field
   if (!lastName) {
     lastNameError.innerText = lastNameErrorTxt;
     isValid = false;
   }
 
-  // Validate ID number field if ID type is selected
   if (idType === "idNumber") {
     if (!idNumber) {
       idNumberError.innerText = errorEmptyId;
@@ -76,7 +71,6 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     }
   }
 
-  // Validate passport number field if passport type is selected
   if (idType === "passportNumber") {
     if (!idNumber) {
       idNumberError.innerText = errorEmptyPassport;
@@ -87,13 +81,11 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     }
   }
 
-  // Validate guardian checkbox
   if (!guardian) {
     guardianError.innerText = "Please check this field.";
     isValid = false;
   }
 
-  // If all fields are valid, display alert with form data
   if (isValid) {
     const idTypeLabel = idType === "idNumber" ? "ID Number" : "Passport Number";
 
@@ -114,14 +106,12 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
   }
 });
 
-// Event listener to restrict input to digits for ID number field
 document.getElementById("idNumber").addEventListener("input", function (event) {
-  this.value = this.value.replace(/\D/g, ""); // Remove non-digit characters
+  this.value = this.value.replace(/\D/g, "");
 });
 
-// Event listener to restrict input to digits for passport number field
 document
   .getElementById("passportNumber")
   .addEventListener("input", function (event) {
-    this.value = this.value.replace(/\D/g, ""); // Remove non-digit characters
+    this.value = this.value.replace(/\D/g, "");
   });
