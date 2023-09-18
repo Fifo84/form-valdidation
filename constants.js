@@ -1,10 +1,8 @@
-// placeholders constants
 const idPlaceholder = "Enter valid Id number";
 const passportPlaceholder = "Enter valid passport number";
 const firstNamePlacholder = " Enter your first name";
 const lastNamePlacholder = " Enter your last name";
 
-// errors constants
 const firstNameErrorTxt = "First Name field is a mandatory field.";
 const lastNameErrorTxt = "Last Name field is a mandatory field.";
 const errorEmptyId = "ID field is a mandatory field";
@@ -13,7 +11,6 @@ const errorRangeOfId = "ID field must consist of 8-9 digits";
 const errorPassportLength = "Passport field must consist of 8-9 digits";
 const wrongId = "This Id number is not a valid israeli number";
 
-// content constants
 const h1 = "With whom do we have the honor";
 const h3 = "The person for which this form is submitted";
 const labelFname = "First Name:";
