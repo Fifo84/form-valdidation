@@ -105,13 +105,3 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     );
   }
 });
-
-document.getElementById("idNumber").addEventListener("input", function (event) {
-  this.value = this.value.replace(/\D/g, "");
-});
-
-document
-  .getElementById("passportNumber")
-  .addEventListener("input", function (event) {
-    this.value = this.value.replace(/\D/g, "");
-  });
